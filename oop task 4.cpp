@@ -4,7 +4,7 @@ using namespace std;
 
 class BankAccount {
 private:
-    std::string name;
+    string name;
     double balance;
 
 public:
@@ -56,3 +56,4 @@ int main() {
     cout << "Done!" << std::endl;
     return 0;
 }
+
