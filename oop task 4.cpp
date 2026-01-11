@@ -8,18 +8,18 @@ private:
     double balance;
 
 public:
-    BankAccount(std::string holder, double bal) {
-        cout << "Making account for " << holder << std::endl;
+    BankAccount(string holder, double bal) {
+        cout << "Making account for " << holder << endl;
         if (bal < 0) {
             throw "Bad balance! Cannot create account.";
         }
         name = holder;
         balance = bal;
-        cout << "Account OK, balance = " << balance << std::endl;
+        cout << "Account OK, balance = " << balance << endl;
     }
 
     ~BankAccount() {
-        cout << "Deleting account " << name << std::endl;
+        cout << "Deleting account " << name << endl;
     }
 
     void withdraw(double amt) {
@@ -27,7 +27,7 @@ public:
             throw "Not enough money!";
         }
         balance -= amt;
-        cout << "OK, new balance = " << balance << std::endl;
+        cout << "OK, new balance = " << balance << endl;
     }
 };
 
@@ -38,9 +38,9 @@ int main() {
         delete acc1;
     }
     catch (const char* msg) {
-        cout << "Error: " << msg << std::endl;
+        cout << "Error: " << msg << endl;
     }
-    cout << "----" << std::endl;
+    cout << "----" << endl;
 
     try {
         // Good account
@@ -50,10 +50,11 @@ int main() {
         delete acc2;
     }
     catch (const char* msg) {
-        cout << "Error: " << msg << std::endl;
+        cout << "Error: " << msg << endl;
     }
 
-    cout << "Done!" << std::endl;
+    cout << "Done!" << endl;
     return 0;
 }
+
 
